@@ -215,7 +215,6 @@
         }
     </style>
 <base target="_blank">
-<base target="_blank">
 </head>
 <body class="bg-white text-black antialiased">
 
@@ -255,10 +254,10 @@
                 </button>
             </div>
             <nav class="flex flex-col space-y-6">
-                <button onclick="showPage('main'); toggleMobileMenu()" class="text-2xl font-medium text-left">Home</button>
-                <button onclick="showPage('courses'); toggleMobileMenu()" class="text-2xl font-medium text-left">Courses</button>
-                <button onclick="showPage('about'); toggleMobileMenu()" class="text-2xl font-medium text-left">About</button>
-                <button onclick="showPage('contact'); toggleMobileMenu()" class="text-2xl font-medium text-left">Contact</button>
+                <button onclick="showPage('main')" class="text-2xl font-medium text-left">Home</button>
+                <button onclick="showPage('courses')" class="text-2xl font-medium text-left">Courses</button>
+                <button onclick="showPage('about')" class="text-2xl font-medium text-left">About</button>
+                <button onclick="showPage('contact')" class="text-2xl font-medium text-left">Contact</button>
             </nav>
             <div class="mt-12 pt-6 border-t">
                 <a href="tel:031-292-2697" class="flex items-center justify-center w-full bg-black text-white py-4 rounded-xl font-medium">
@@ -777,13 +776,14 @@
                 }
             });
             
+            // 메뉴가 열려있으면 무조건 닫기
             const mobileMenu = document.getElementById('mobileMenu');
             if (mobileMenu.classList.contains('open')) {
                 mobileMenu.classList.remove('open');
             }
         }
 
-        // Mobile Menu
+        // Mobile Menu Toggle (only for hamburger and close buttons)
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('open');
         }
