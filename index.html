@@ -283,7 +283,18 @@
             }
         }
 
-        /* ===== FIXED: 슬라이드 레이아웃 - 버튼이 콘텐츠를 가리지 않도록 ===== */
+        /* Auto-positioned button container - always below content */
+        .slide-buttons {
+            margin-top: 40px;
+            z-index: 20;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Single flex container for content + buttons */
         .slide-inner {
             position: absolute;
             inset: 0;
@@ -291,55 +302,16 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 24px 24px 80px 24px; /* 하단에 dot indicator 공간 확보 */
+            padding: 0 24px;
         }
 
-        /* 텍스트 + 버튼을 하나의 flex 컨테이너에 담아 자동 배치 */
-        .slide-content-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 32px; /* 텍스트와 버튼 사이 간격 */
-            max-width: 896px;
-            text-align: center;
-            width: 100%;
-        }
-
-        /* 텍스트 영역 - flex-shrink 방지하여 항상 보이도록 */
         .slide-text-content {
-            flex-shrink: 0;
-        }
-
-        /* 버튼 영역 - 텍스트 아래로 자연스럽게 배치 */
-        .slide-buttons {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            flex-shrink: 0;
-        }
-
-        /* 모바일에서 긴 텍스트 대응 */
-        @media (max-width: 768px) {
-            .slide-inner {
-                padding: 80px 20px 100px 20px; /* 상단 헤더 + 하단 dot 여유 */
-                justify-content: flex-start; /* 모바일에서는 상단부터 시작 */
-                padding-top: 120px;
-            }
-            .slide-content-wrapper {
-                gap: 24px;
-            }
-        }
-
-        /* 태블릿/데스크톱에서는 중앙 정렬 유지 */
-        @media (min-width: 769px) {
-            .slide-inner {
-                justify-content: center;
-            }
+            text-align: center;
+            max-width: 896px;
         }
     </style>
+<base target="_blank">
+<base target="_blank">
 </head>
 <body class="bg-white text-black antialiased">
 
@@ -405,121 +377,109 @@
                 <!-- Slide 1: 메카코딩학원 브랜드 -->
                 <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop');">
                     <div class="slide-inner">
-                        <div class="slide-content-wrapper slide-content">
-                            <div class="slide-text-content">
-                                <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Robotics & Software Education</p>
-                                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                                    메카코딩학원
-                                </h1>
-                                <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
-                                    로보틱스와 소프트웨어, 결과로 증명합니다
-                                </p>
-                            </div>
-                            <div class="slide-buttons">
-                                <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
-                                    상담 문의
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                                    </svg>
-                                </button>
-                            </div>
+                        <div class="slide-content slide-text-content">
+                            <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Robotics & Software Education</p>
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                메카코딩학원
+                            </h1>
+                            <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
+                                로보틱스와 소프트웨어, 결과로 증명합니다
+                            </p>
                         </div>
+                    </div>
+                    <div class="slide-buttons">
+                        <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
+                            상담 문의
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
                 <!-- Slide 2: 프로젝트 기반 학습 -->
                 <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1920&h=1080&fit=crop');">
                     <div class="slide-inner">
-                        <div class="slide-content-wrapper slide-content">
-                            <div class="slide-text-content">
-                                <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Project Based Learning</p>
-                                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                                    설계부터 결과까지
-                                </h1>
-                                <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
-                                    학생이 문제를 정의하고, 기술로 해결하며, 결과를 설명하는 힘
-                                </p>
-                            </div>
-                            <div class="slide-buttons">
-                                <button onclick="showPage('courses')" class="hero-cta-btn hero-cta-btn--outline" type="button">
-                                    커리큘럼 보기
-                                </button>
-                            </div>
+                        <div class="slide-content slide-text-content">
+                            <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Project Based Learning</p>
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                설계부터 결과까지
+                            </h1>
+                            <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
+                                학생이 문제를 정의하고, 기술로 해결하며, 결과를 설명하는 힘
+                            </p>
                         </div>
+                    </div>
+                    <div class="slide-buttons">
+                        <button onclick="showPage('courses')" class="hero-cta-btn hero-cta-btn--outline" type="button">
+                            커리큘럼 보기
+                        </button>
                     </div>
                 </div>
 
                 <!-- Slide 3: VEX 대회 -->
                 <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1580584126903-c17d41830450?w=1920&h=1080&fit=crop');">
                     <div class="slide-inner">
-                        <div class="slide-content-wrapper slide-content">
-                            <div class="slide-text-content">
-                                <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">VEX Robotics Competition</p>
-                                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                                    세계로 뻗어나가는<br>로봇 경쟁력
-                                </h1>
-                                <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
-                                    VEX World Championship 진출을 향한 체계적인 트레이닝
-                                </p>
-                            </div>
-                            <div class="slide-buttons">
-                                <button onclick="showPage('courses')" class="hero-cta-btn hero-cta-btn--outline" type="button">
-                                    대회 코스 보기
-                                </button>
-                            </div>
+                        <div class="slide-content slide-text-content">
+                            <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">VEX Robotics Competition</p>
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                세계로 뻗어나가는<br>로봇 경쟁력
+                            </h1>
+                            <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
+                                VEX World Championship 진출을 향한 체계적인 트레이닝
+                            </p>
                         </div>
+                    </div>
+                    <div class="slide-buttons">
+                        <button onclick="showPage('courses')" class="hero-cta-btn hero-cta-btn--outline" type="button">
+                            대회 코스 보기
+                        </button>
                     </div>
                 </div>
 
                 <!-- Slide 4: 소프트웨어 개발 -->
                 <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1920&h=1080&fit=crop');">
                     <div class="slide-inner">
-                        <div class="slide-content-wrapper slide-content">
-                            <div class="slide-text-content">
-                                <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Software Development</p>
-                                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                                    코드로 만드는<br>미래 기술
-                                </h1>
-                                <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
-                                    Python, C++부터 알고리즘까지 실전 중심 소프트웨어 교육
-                                </p>
-                            </div>
-                            <div class="slide-buttons">
-                                <button onclick="showPage('courses')" class="hero-cta-btn hero-cta-btn--outline" type="button">
-                                    소프트웨어 코스 보기
-                                </button>
-                            </div>
+                        <div class="slide-content slide-text-content">
+                            <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Software Development</p>
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                코드로 만드는<br>미래 기술
+                            </h1>
+                            <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
+                                Python, C++부터 알고리즘까지 실전 중심 소프트웨어 교육
+                            </p>
                         </div>
+                    </div>
+                    <div class="slide-buttons">
+                        <button onclick="showPage('courses')" class="hero-cta-btn hero-cta-btn--outline" type="button">
+                            소프트웨어 코스 보기
+                        </button>
                     </div>
                 </div>
 
                 <!-- Slide 5: 입시 & 포트폴리오 -->
                 <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop');">
                     <div class="slide-inner">
-                        <div class="slide-content-wrapper slide-content">
-                            <div class="slide-text-content">
-                                <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Portfolio & Admissions</p>
-                                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                                    결과로 증명하는<br>포트폴리오
-                                </h1>
-                                <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
-                                    국제학교·해외대학 진학을 위한 차별화된 프로젝트 경험
-                                </p>
-                            </div>
-                            <div class="slide-buttons">
-                                <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
-                                    입시 상담하기
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                                    </svg>
-                                </button>
-                            </div>
+                        <div class="slide-content slide-text-content">
+                            <p class="text-white/60 text-sm uppercase tracking-[0.3em] mb-4">Portfolio & Admissions</p>
+                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                결과로 증명하는<br>포트폴리오
+                            </h1>
+                            <p class="text-xl text-white/70 max-w-2xl mx-auto font-light">
+                                국제학교·해외대학 진학을 위한 차별화된 프로젝트 경험
+                            </p>
                         </div>
                     </div>
+                    <div class="slide-buttons">
+                        <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
+                            입시 상담하기
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-
-                <!-- Dot Indicators -->
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
                     <button class="slider-dot w-8 h-1 rounded-full bg-white/30 transition-all" data-slide="0"></button>
                     <button class="slider-dot w-8 h-1 rounded-full bg-white/30 transition-all" data-slide="1"></button>
                     <button class="slider-dot w-8 h-1 rounded-full bg-white/30 transition-all" data-slide="2"></button>
