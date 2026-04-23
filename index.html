@@ -216,6 +216,56 @@
         .logo-white {
             filter: brightness(0) invert(1);
         }
+        
+        /* Hero Button Fix - 클릭 영역과 텍스트 완벽 일치 */
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 56px;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            border-radius: 9999px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero-btn-white {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .hero-btn-white:hover {
+            background-color: rgba(255,255,255,0.9);
+        }
+        
+        .hero-btn-outline {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .hero-btn-outline:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        
+        /* 모바일 터치 최적화 */
+        @media (max-width: 768px) {
+            .hero-btn {
+                min-height: 52px;
+                padding: 14px 28px;
+                font-size: 15px;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
     </style>
 <base target="_blank">
 </head>
@@ -291,9 +341,9 @@
                             <p class="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light">
                                 로보틱스와 소프트웨어, 결과로 증명합니다
                             </p>
-                            <button onclick="showPage('contact')" class="bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-all flex items-center gap-2 mx-auto">
-                                <span>상담 문의</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button onclick="showPage('contact')" class="hero-btn hero-btn-white" type="button">
+                                상담 문의
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                 </svg>
                             </button>
@@ -312,7 +362,7 @@
                             <p class="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light">
                                 학생이 문제를 정의하고, 기술로 해결하며, 결과를 설명하는 힘
                             </p>
-                            <button onclick="showPage('courses')" class="border border-white/40 text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-black transition-all">
+                            <button onclick="showPage('courses')" class="hero-btn hero-btn-outline" type="button">
                                 커리큘럼 보기
                             </button>
                         </div>
@@ -330,7 +380,7 @@
                             <p class="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light">
                                 VEX World Championship 진출을 향한 체계적인 트레이닝
                             </p>
-                            <button onclick="showPage('courses')" class="border border-white/40 text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-black transition-all">
+                            <button onclick="showPage('courses')" class="hero-btn hero-btn-outline" type="button">
                                 대회 코스 보기
                             </button>
                         </div>
@@ -348,7 +398,7 @@
                             <p class="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light">
                                 Python, C++부터 알고리즘까지 실전 중심 소프트웨어 교육
                             </p>
-                            <button onclick="showPage('courses')" class="border border-white/40 text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-black transition-all">
+                            <button onclick="showPage('courses')" class="hero-btn hero-btn-outline" type="button">
                                 소프트웨어 코스 보기
                             </button>
                         </div>
@@ -366,9 +416,9 @@
                             <p class="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-light">
                                 국제학교·해외대학 진학을 위한 차별화된 프로젝트 경험
                             </p>
-                            <button onclick="showPage('contact')" class="bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-all flex items-center gap-2 mx-auto">
-                                <span>입시 상담하기</span>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button onclick="showPage('contact')" class="hero-btn hero-btn-white" type="button">
+                                입시 상담하기
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                 </svg>
                             </button>
