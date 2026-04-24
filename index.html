@@ -218,7 +218,6 @@
         }
         
         /* ===== HERO BUTTON FIX ===== */
-        /* 버튼 내부 텍스트와 아이콘을 완벽하게 중앙 정렬하고 클릭 영역 확보 */
         .hero-cta-btn {
             display: inline-flex;
             align-items: center;
@@ -238,12 +237,10 @@
             position: relative;
             z-index: 10;
             white-space: nowrap;
-            /* 텍스트가 정중앙에 오도록 */
             text-align: center;
             vertical-align: middle;
         }
         
-        /* 아이콘이 있을 때와 없을 때 모두 동일한 높이/정렬 유지 */
         .hero-cta-btn svg {
             display: inline-block;
             flex-shrink: 0;
@@ -252,7 +249,6 @@
             vertical-align: middle;
         }
         
-        /* 흰색 버튼 (Solid) */
         .hero-cta-btn--white {
             background-color: #ffffff;
             color: #000000;
@@ -261,7 +257,6 @@
             background-color: rgba(255,255,255,0.9);
         }
         
-        /* 아웃라인 버튼 (Outline) */
         .hero-cta-btn--outline {
             background-color: transparent;
             color: #ffffff;
@@ -272,7 +267,6 @@
             color: #000000;
         }
         
-        /* 모바일 터치 최적화 */
         @media (max-width: 768px) {
             .hero-cta-btn {
                 min-height: 52px;
@@ -283,18 +277,28 @@
             }
         }
 
-        /* Auto-positioned button container - always below content */
+        /* ===== BUTTON POSITION FIX: 하단 고정 ===== */
         .slide-buttons {
-            margin-top: 40px;
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 20;
             display: flex;
             gap: 12px;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            width: 100%;
+            padding: 0 24px;
         }
 
-        /* Single flex container for content + buttons */
+        @media (max-width: 768px) {
+            .slide-buttons {
+                bottom: 60px;
+            }
+        }
+
         .slide-inner {
             position: absolute;
             inset: 0;
@@ -310,8 +314,6 @@
             max-width: 896px;
         }
     </style>
-<base target="_blank">
-<base target="_blank">
 </head>
 <body class="bg-white text-black antialiased">
 
@@ -479,7 +481,7 @@
                         </button>
                     </div>
                 </div>
-<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
                     <button class="slider-dot w-8 h-1 rounded-full bg-white/30 transition-all" data-slide="0"></button>
                     <button class="slider-dot w-8 h-1 rounded-full bg-white/30 transition-all" data-slide="1"></button>
                     <button class="slider-dot w-8 h-1 rounded-full bg-white/30 transition-all" data-slide="2"></button>
@@ -489,7 +491,7 @@
             </div>
         </section>
 
-        <!-- COURSES PAGE - Image Grid with Hover -->
+        <!-- COURSES PAGE -->
         <section id="page-courses" class="page-section hidden">
             <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
                 <div class="mb-12">
@@ -498,7 +500,6 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <!-- Card 1 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="Robotics Engineering">
                         <div class="level-badge bg-blue-600 text-white">기초</div>
@@ -515,7 +516,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 2 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="VEX Competition">
                         <div class="level-badge bg-red-600 text-white">대회</div>
@@ -532,7 +532,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 3 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="Arduino">
                         <div class="level-badge bg-yellow-600 text-white">하드웨어</div>
@@ -549,7 +548,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 4 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="Software Development">
                         <div class="level-badge bg-green-600 text-white">코딩</div>
@@ -566,7 +564,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 5 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="Algorithm">
                         <div class="level-badge bg-purple-600 text-white">CS 이론</div>
@@ -583,7 +580,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 6 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="Portfolio">
                         <div class="level-badge bg-blue-500 text-white">입시</div>
@@ -600,7 +596,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 7 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="STEM">
                         <div class="level-badge bg-orange-500 text-white">STEM</div>
@@ -617,7 +612,6 @@
                         </div>
                     </div>
                     
-                    <!-- Card 8 -->
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="Admissions">
                         <div class="level-badge bg-pink-600 text-white">대학</div>
@@ -637,11 +631,10 @@
             </div>
         </section>
 
-        <!-- ABOUT PAGE - Split Layout -->
+        <!-- ABOUT PAGE -->
         <section id="page-about" class="page-section hidden">
             <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
                 <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
-                    <!-- Left: Brand Quote & Philosophy -->
                     <div class="lg:w-1/2">
                         <div class="bg-gray-50 p-8 lg:p-12 rounded-2xl h-full flex flex-col justify-center">
                             <svg class="w-10 h-10 text-gray-300 mb-6" fill="currentColor" viewBox="0 0 24 24">
@@ -659,7 +652,6 @@
                         </div>
                     </div>
 
-                    <!-- Right: Director Profile -->
                     <div class="lg:w-1/2">
                         <div class="flex items-start gap-6 mb-8">
                             <div class="w-32 h-40 lg:w-40 lg:h-52 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
@@ -749,7 +741,7 @@
             </div>
         </section>
 
-        <!-- CONTACT PAGE - Map Layout -->
+        <!-- CONTACT PAGE -->
         <section id="page-contact" class="page-section hidden">
             <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
                 <div class="mb-12">
@@ -758,7 +750,6 @@
                 </div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Geumgok Campus -->
                     <div>
                         <div class="map-container h-64 lg:h-80 mb-6 bg-gray-100">
                             <iframe 
@@ -791,7 +782,6 @@
                         </div>
                     </div>
                     
-                    <!-- Gwanggyo Campus -->
                     <div>
                         <div class="map-container h-64 lg:h-80 mb-6 bg-gray-100">
                             <iframe 
@@ -825,7 +815,6 @@
                     </div>
                 </div>
                 
-                <!-- CTA Section -->
                 <div class="mt-16 bg-gray-50 rounded-2xl p-8 lg:p-12 text-center">
                     <h3 class="text-2xl font-bold mb-3">어떤 수업이 맞을지 모르겠다면?</h3>
                     <p class="text-gray-500 mb-6">무료 상담을 통해 자녀의 나이, 경험, 목표에 맞는 프로그램을 안내해 드립니다.</p>
@@ -838,11 +827,10 @@
         </section>
     </main>
 
-    <!-- Footer - Dark Style -->
+    <!-- Footer -->
     <footer class="footer-dark mt-auto">
         <div class="max-w-7xl mx-auto px-6 py-12 lg:py-16">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
-                <!-- Logo & Info -->
                 <div>
                     <img src="/images/MechaCoding-logo-white.png" alt="MechaCoding Academy" class="h-16 w-auto mb-4 logo-white">
                     <p class="text-gray-400 text-sm leading-relaxed">
@@ -858,7 +846,6 @@
                     </div>
                 </div>
                 
-                <!-- Menu -->
                 <div>
                     <h4 class="text-gray-500 text-sm font-medium mb-4 uppercase tracking-wider">Menu</h4>
                     <ul class="space-y-3">
@@ -869,7 +856,6 @@
                     </ul>
                 </div>
                 
-                <!-- Locations -->
                 <div>
                     <h4 class="text-gray-500 text-sm font-medium mb-4 uppercase tracking-wider">오시는 길</h4>
                     <div class="space-y-4">
@@ -923,14 +909,13 @@
                 }
             });
             
-            // 메뉴가 열려있으면 무조건 닫기
             const mobileMenu = document.getElementById('mobileMenu');
             if (mobileMenu.classList.contains('open')) {
                 mobileMenu.classList.remove('open');
             }
         }
 
-        // Mobile Menu Toggle (only for hamburger and close buttons)
+        // Mobile Menu Toggle
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('open');
         }
