@@ -193,16 +193,16 @@
         /* Career item */
         .career-item {
             position: relative;
-            padding-left: 20px;
+            padding-left: 24px;
             border-bottom: 1px solid #eee;
         }
         .career-item::before {
             content: '';
             position: absolute;
             left: 0;
-            top: 8px;
-            width: 8px;
-            height: 2px;
+            top: 14px;
+            width: 10px;
+            height: 3px;
             background: #ff4444;
         }
         
@@ -313,7 +313,21 @@
             text-align: center;
             max-width: 896px;
         }
+
+        /* Director profile enhanced styles */
+        .director-photo {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        @media (min-width: 1024px) {
+            .director-photo {
+                height: 420px;
+            }
+        }
     </style>
+<base target="_blank">
 </head>
 <body class="bg-white text-black antialiased">
 
@@ -635,15 +649,30 @@
         <section id="page-about" class="page-section hidden">
             <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
                 <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
-                    <div class="lg:w-1/2">
-                        <div class="bg-gray-50 p-8 lg:p-12 rounded-2xl h-full flex flex-col justify-center">
-                            <svg class="w-10 h-10 text-gray-300 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                    <!-- LEFT COLUMN: Director Profile + Slogan -->
+                    <div class="lg:w-1/2 flex flex-col gap-8">
+                        <!-- Director Profile (Moved to top, enlarged) -->
+                        <div>
+                            <div class="mb-6">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=1000&fit=crop" alt="변경빈 대표원장" class="director-photo">
+                            </div>
+                            <div>
+                                <p class="text-base text-gray-400 mb-2">MechaCoding Academy Director</p>
+                                <h3 class="text-3xl lg:text-4xl font-bold mb-2">변경빈 대표원장</h3>
+                                <p class="text-lg text-gray-500 mb-2">Byun Kyung-bin</p>
+                                <p class="text-base text-gray-400">메카코딩학원 원장 / 로보틱스 부문 대표 코치</p>
+                            </div>
+                        </div>
+
+                        <!-- Slogan Box -->
+                        <div class="bg-gray-50 p-8 lg:p-12 rounded-2xl">
+                            <svg class="w-12 h-12 text-gray-300 mb-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/>
                             </svg>
-                            <h2 class="text-3xl lg:text-4xl font-bold leading-tight mb-4">
+                            <h2 class="text-3xl lg:text-4xl font-bold leading-tight mb-6">
                                 "글로벌 상위 1%를<br>지향하는 로보틱스 교육의 기준"
                             </h2>
-                            <p class="text-gray-500 text-base leading-relaxed mt-4">
+                            <p class="text-gray-500 text-lg leading-relaxed">
                                 최상위 국제학교의 헤드 코치와 KAIST 로보틱스 캠프 지도 강사를<br>
                                 역임하며 교육의 전문성을 검증받았습니다.<br>
                                 4년 연속 VEX 월드 챔피언십 출전 및 지도 경력을 바탕으로<br>
@@ -652,87 +681,76 @@
                         </div>
                     </div>
 
+                    <!-- RIGHT COLUMN: Career & Philosophy (Enlarged text) -->
                     <div class="lg:w-1/2">
-                        <div class="flex items-start gap-6 mb-8">
-                            <div class="w-32 h-40 lg:w-40 lg:h-52 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
-                                <img src="/images/ByunKB.jpg" alt="변경빈 대표원장" class="w-full h-full">
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-400 mb-1">MechaCoding Academy Director</p>
-                                <h3 class="text-2xl font-bold mb-1">변경빈 대표원장</h3>
-                                <p class="text-gray-500">Byun Kyung-bin</p>
-                                <p class="text-sm text-gray-400 mt-2">메카코딩학원 원장 / 로보틱스 부문 대표 코치</p>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Academic & International Leadership</h4>
+                        <div class="mb-8">
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-5">Academic & International Leadership</h4>
                             <div class="space-y-0">
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">대한민국 공군(ROK Air Force) 정보통신학교 교관 전역 (ICT 교육 전담)</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">대한민국 공군(ROK Air Force) 정보통신학교 교관 전역 (ICT 교육 전담)</p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">Chadwick International (채드윅 송도국제학교) VEX Robotics Head Coach</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">Chadwick International (채드윅 송도국제학교) VEX Robotics Head Coach</p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">Dwight School Seoul (드와이트 외국인학교) VEX Robotics Head Coach</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">Dwight School Seoul (드와이트 외국인학교) VEX Robotics Head Coach</p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">MICA (Mastery Integrity Creativity Academy) VEX Robotics Head Coach</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">MICA (Mastery Integrity Creativity Academy) VEX Robotics Head Coach</p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">KAIST VEX Robotics Camp 지도 강사 및 대표 코치</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">KAIST VEX Robotics Camp 지도 강사 및 대표 코치</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">World-Class Achievement</h4>
+                        <div class="mb-8">
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-5">World-Class Achievement</h4>
                             <div class="space-y-0">
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">국내 최초 4년 연속 국가대표 선발 기록 수립 </p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">국내 최초 4년 연속 국가대표 선발 기록 수립 </p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">2023 - 2025 VEX Robotics World Championship (Dallas, Texas) 출전 및 지도</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">2023 - 2025 VEX Robotics World Championship (Dallas, Texas) 출전 및 지도</p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">2026 VEX Robotics World Championship (St. Louis, Missouri) 출전 및 지도</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">2026 VEX Robotics World Championship (St. Louis, Missouri) 출전 및 지도</p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">VEX Robotics 한국 국가대표 선발전 다수 입상팀 배출</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">VEX Robotics 한국 국가대표 선발전 다수 입상팀 배출</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mb-6">
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Advanced Curriculum</h4>
+                        <div class="mb-8">
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-5">Advanced Curriculum</h4>
                             <div class="space-y-0">
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">VEX IQ / V5 하드웨어 메커니즘 설계 및 시스템 엔지니어링 전문가</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">VEX IQ / V5 하드웨어 메커니즘 설계 및 시스템 엔지니어링 전문가</p>
                                 </div>
-                                <div class="career-item py-3">
-                                    <p class="text-sm font-medium">AI 융합 차세대 코딩 커리큘럼 [Vibe Coding] 개발 총괄</p>
+                                <div class="career-item py-4">
+                                    <p class="text-base font-medium">AI 융합 차세대 코딩 커리큘럼 [Vibe Coding] 개발 총괄</p>
                                 </div>
-                                <div class="career-item py-3 border-b-0">
-                                    <p class="text-sm font-medium">초1부터 고3까지 이어지는 체계적인 PBL(Project-Based Learning) 로드맵 구축</p>
+                                <div class="career-item py-4 border-b-0">
+                                    <p class="text-base font-medium">초1부터 고3까지 이어지는 체계적인 PBL(Project-Based Learning) 로드맵 구축</p>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Philosophy</h4>
-                            <div class="space-y-3">
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <p class="text-sm font-bold text-gray-900 mb-1">Standard-Centric</p>
-                                    <p class="text-sm text-gray-500">공군 교관 출신의 엄격한 기준과 체계적인 관리로 학습 성취도를 보장합니다.</p>
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-5">Philosophy</h4>
+                            <div class="space-y-4">
+                                <div class="bg-gray-50 p-5 rounded-lg">
+                                    <p class="text-base font-bold text-gray-900 mb-2">Standard-Centric</p>
+                                    <p class="text-base text-gray-500">공군 교관 출신의 엄격한 기준과 체계적인 관리로 학습 성취도를 보장합니다.</p>
                                 </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <p class="text-sm font-bold text-gray-900 mb-1">Global Excellence</p>
-                                    <p class="text-sm text-gray-500">미국 현지 월드 챔피언십 지도 경험을 바탕으로 글로벌 기술 트렌드를 교육에 즉시 반영합니다.</p>
+                                <div class="bg-gray-50 p-5 rounded-lg">
+                                    <p class="text-base font-bold text-gray-900 mb-2">Global Excellence</p>
+                                    <p class="text-base text-gray-500">미국 현지 월드 챔피언십 지도 경험을 바탕으로 글로벌 기술 트렌드를 교육에 즉시 반영합니다.</p>
                                 </div>
-                                <div class="bg-gray-50 p-4 rounded-lg">
-                                    <p class="text-sm font-bold text-gray-900 mb-1">Elite Path</p>
-                                    <p class="text-sm text-gray-500">단순 취미를 넘어 실전 대회와 포트폴리오로 연결되는 엘리트 로보틱스 교육을 지향합니다.</p>
+                                <div class="bg-gray-50 p-5 rounded-lg">
+                                    <p class="text-base font-bold text-gray-900 mb-2">Elite Path</p>
+                                    <p class="text-base text-gray-500">단순 취미를 넘어 실전 대회와 포트폴리오로 연결되는 엘리트 로보틱스 교육을 지향합니다.</p>
                                 </div>
                             </div>
                         </div>
@@ -750,38 +768,7 @@
                 </div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div>
-                        <div class="map-container h-64 lg:h-80 mb-6 bg-gray-100">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.1234567890123!2d127.01234567890123!3d37.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDA3JzI0LjQiTiAxMjfCsDAwJzQ0LjQiRQ!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                class="grayscale hover:grayscale-0 transition-all duration-500">
-                            </iframe>
-                        </div>
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-xl font-bold">호매실 캠퍼스</h3>
-                            <a href="https://map.naver.com/v5/search/수원시%20권선구%20금곡로196번길%2061" target="_blank" class="text-sm text-blue-600 flex items-center gap-1 hover:underline">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                                지도에서 열기
-                            </a>
-                        </div>
-                        <div class="space-y-2 text-sm">
-                            <div class="flex items-start gap-2 text-gray-600">
-                                <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                                <span>수원시 권선구 금곡로196번길 61, 3층</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <svg class="w-4 h-4 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                                <a href="tel:031-292-2697" class="text-red-500 font-bold text-base hover:text-red-600">031-292-2697</a>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <!-- Swapped: Gwanggyo first -->
                     <div>
                         <div class="map-container h-64 lg:h-80 mb-6 bg-gray-100">
                             <iframe 
@@ -791,8 +778,7 @@
                                 style="border:0;" 
                                 allowfullscreen="" 
                                 loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                class="grayscale hover:grayscale-0 transition-all duration-500">
+                                referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
                         <div class="flex items-center justify-between mb-2">
@@ -806,6 +792,38 @@
                             <div class="flex items-start gap-2 text-gray-600">
                                 <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                                 <span>수원시 영통구 에듀타운로 84, 3층</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                <a href="tel:031-292-2697" class="text-red-500 font-bold text-base hover:text-red-600">031-292-2697</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Swapped: Homaesil second -->
+                    <div>
+                        <div class="map-container h-64 lg:h-80 mb-6 bg-gray-100">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.1234567890123!2d127.01234567890123!3d37.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDA3JzI0LjQiTiAxMjfCsDAwJzQ0LjQiRQ!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold">호매실 캠퍼스</h3>
+                            <a href="https://map.naver.com/v5/search/수원시%20권선구%20금곡로196번길%2061" target="_blank" class="text-sm text-blue-600 flex items-center gap-1 hover:underline">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                지도에서 열기
+                            </a>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-start gap-2 text-gray-600">
+                                <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                <span>수원시 권선구 금곡로196번길 61, 3층</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <svg class="w-4 h-4 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -859,14 +877,16 @@
                 <div>
                     <h4 class="text-gray-500 text-sm font-medium mb-4 uppercase tracking-wider">오시는 길</h4>
                     <div class="space-y-4">
-                        <div>
-                            <p class="text-white font-medium mb-1">호매실 캠퍼스</p>
-                            <p class="text-gray-400 text-sm">수원시 권선구 금곡로196번길 61, 3층</p>
-                            <a href="tel:031-292-2697" class="text-red-500 font-bold hover:text-red-400 transition-colors">031-292-2697</a>
-                        </div>
+                        <!-- Swapped: Gwanggyo first -->
                         <div>
                             <p class="text-white font-medium mb-1">광교 캠퍼스</p>
                             <p class="text-gray-400 text-sm">수원시 영통구 에듀타운로 84, 3층</p>
+                            <a href="tel:031-292-2697" class="text-red-500 font-bold hover:text-red-400 transition-colors">031-292-2697</a>
+                        </div>
+                        <!-- Swapped: Homaesil second -->
+                        <div>
+                            <p class="text-white font-medium mb-1">호매실 캠퍼스</p>
+                            <p class="text-gray-400 text-sm">수원시 권선구 금곡로196번길 61, 3층</p>
                             <a href="tel:031-292-2697" class="text-red-500 font-bold hover:text-red-400 transition-colors">031-292-2697</a>
                         </div>
                     </div>
