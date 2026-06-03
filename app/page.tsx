@@ -997,7 +997,7 @@ export default function HomePage() {
                 alt="MechaCoding Academy"
                 width={200}
                 height={64}
-                className="h-16 w-auto logo-white"
+                className="h-16 w-auto mb-4 logo-white"
               />
               <p className="text-gray-400 text-sm leading-relaxed">
                 성과와 실력으로 증명하는<br />로보틱스·소프트웨어·AI 전문 아카데미
@@ -1056,3 +1056,26 @@ export default function HomePage() {
                       {campus.phone}
                     </a>
                   </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-500 text-sm">&copy; 2026 MechaCoding Academy. All rights reserved.</p>
+            <p className="text-gray-600 text-sm">메카코딩학원 · 로보틱스 &amp; 소프트웨어 &amp; AI 교육</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Sticky Phone Button */}
+      <a
+        href="tel:031-292-2697"
+        className="fixed bottom-6 right-6 z-40 lg:hidden bg-black text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl pulse-btn"
+        aria-label="전화 걸기"
+      >
+        <PhoneIcon className="w-6 h-6" />
+      </a>
+    </>
+  );
+}
