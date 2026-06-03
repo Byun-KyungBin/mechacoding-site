@@ -106,7 +106,22 @@
         .faq-icon.open { transform: rotate(180deg); }
         .review-card { background: #fafafa; border-radius: 12px; padding: 24px; border: 1px dashed #ddd; }
         .cta-banner { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); }
+        /* NEW: Why Section */
+        .why-card { padding: 32px; border: 1px solid #eee; border-radius: 16px; transition: all 300ms ease; }
+        .why-card:hover { border-color: #000; transform: translateY(-2px); }
+        /* NEW: Path Section */
+        .path-card { position: relative; padding: 20px 24px; border-left: 3px solid #000; background: #fafafa; margin-bottom: 0; }
+        .path-card::before { content: ''; position: absolute; left: -7px; top: 24px; width: 11px; height: 11px; border-radius: 50%; background: #000; border: 2px solid #fff; }
+        .path-connector { position: absolute; left: -3px; top: 35px; bottom: 0; width: 3px; background: #e5e5e5; }
+        .path-card:last-child .path-connector { display: none; }
+        .path-age { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; background: #000; color: white; margin-bottom: 8px; }
+        /* NEW: Trial Section */
+        .trial-step { position: relative; padding-left: 40px; padding-bottom: 32px; }
+        .trial-step::before { content: ''; position: absolute; left: 12px; top: 4px; bottom: 0; width: 2px; background: #e5e5e5; }
+        .trial-step:last-child::before { display: none; }
+        .trial-step::after { content: ''; position: absolute; left: 6px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: #000; border: 2px solid #fff; }
     </style>
+<base target="_blank">
 <base target="_blank">
 </head>
 <body class="bg-white text-black antialiased">
@@ -159,18 +174,27 @@
                         <div class="slide-content slide-text-content">
                             <p class="text-white/50 text-sm uppercase tracking-[0.3em] mb-4">Robotics &middot; Software &middot; AI</p>
                             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
-                                게임을 소비하는 아이에서,<br class="hidden sm:inline">기술을 만드는 아이로
+                                생각을 현실로 만드는 힘
                             </h1>
                             <p class="text-base sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed px-4">
-                                직접 만들고, 직접 실험하고, 직접 문제를 해결하며 성장합니다.<br class="hidden sm:inline">
-                                5세부터 고3까지, 프로젝트 기반 로보틱스 &amp; 소프트웨어 교육
+                                학생이 직접 만들고, 실험하고, 문제를 해결하며 성장하는 프로젝트 기반 교육
                             </p>
+                            <div class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/40">
+                                <span>초1~고3 맞춤 교육</span>
+                                <span class="hidden sm:inline">&middot;</span>
+                                <span>VEX Robotics &middot; Python &middot; Arduino &middot; AI</span>
+                                <span class="hidden sm:inline">&middot;</span>
+                                <span>체험수업 및 레벨진단 운영</span>
+                            </div>
                         </div>
                     </div>
                     <div class="slide-buttons">
                         <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
-                            교육 상담문의
+                            체험수업 및 레벨진단 신청
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </button>
+                        <button onclick="showPage('programs')" class="hero-cta-btn hero-cta-btn--outline" type="button">
+                            교육과정 살펴보기
                         </button>
                     </div>
                 </div>
@@ -183,7 +207,10 @@
                         </div>
                     </div>
                     <div class="slide-buttons">
-                        <button onclick="showPage('programs')" class="hero-cta-btn hero-cta-btn--outline" type="button">커리큘럼 보기</button>
+                        <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
+                            체험수업 및 레벨진단 신청
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1580584126903-c17d41830450?w=1920&h=1080&fit=crop');">
@@ -195,7 +222,10 @@
                         </div>
                     </div>
                     <div class="slide-buttons">
-                        <button onclick="showPage('programs')" class="hero-cta-btn hero-cta-btn--outline" type="button">대회 코스 보기</button>
+                        <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
+                            체험수업 및 레벨진단 신청
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1920&h=1080&fit=crop');">
@@ -207,7 +237,10 @@
                         </div>
                     </div>
                     <div class="slide-buttons">
-                        <button onclick="showPage('programs')" class="hero-cta-btn hero-cta-btn--outline" type="button">소프트웨어 코스 보기</button>
+                        <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
+                            체험수업 및 레벨진단 신청
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop');">
@@ -219,8 +252,8 @@
                         </div>
                     </div>
                     <div class="slide-buttons">
-                        <button onclick="scrollToContact()" class="hero-cta-btn hero-cta-btn--outline" type="button">
-                            입시 상담하기
+                        <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white" type="button">
+                            체험수업 및 레벨진단 신청
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </button>
                     </div>
@@ -234,26 +267,44 @@
                 </div>
             </div>
 
-            <!-- Trust Bar -->
-            <div class="border-b border-gray-100">
-                <div class="max-w-7xl mx-auto px-6 py-8">
-                    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 md:gap-x-16 text-xs sm:text-sm text-gray-400 px-4">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            <span>VEX Robotics 전문 교육</span>
+            <!-- Why MechaCoding -->
+            <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <p class="text-sm font-medium text-black/40 uppercase tracking-[0.3em] mb-3">Why MechaCoding</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 leading-tight">
+                        우리가 가르치고 싶은 것은<br class="hidden sm:inline">로봇이 아닙니다
+                    </h2>
+                </div>
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <p class="text-base sm:text-lg text-gray-500 leading-relaxed mb-6">
+                        중요한 것은 로봇 자체가 아닙니다.<br class="hidden sm:inline">
+                        문제를 발견하고, 해결책을 고민하고, 직접 만들고, 실패를 개선하며, 끝까지 완성하는 경험입니다.
+                    </p>
+                    <p class="text-base sm:text-lg text-gray-500 leading-relaxed">
+                        메카코딩은 로보틱스, 소프트웨어, AI를 통해 학생이 스스로 생각하고 성장하는 힘을 기르는 프로젝트 기반 교육을 제공합니다.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="why-card text-center">
+                        <div class="w-14 h-14 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            <span>국제학교 출신 전문 강사진</span>
+                        <h3 class="text-lg font-bold mb-2">문제를 발견하는 힘</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">주어진 상황에서 문제를 정의하고, 해결 방향을 스스로 설정합니다.</p>
+                    </div>
+                    <div class="why-card text-center">
+                        <div class="w-14 h-14 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            <span>5세부터 고3까지 단계별 커리큘럼</span>
+                        <h3 class="text-lg font-bold mb-2">해결책을 만드는 힘</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">설계부터 제작, 테스트, 개선까지 전 과정을 경험하며 완성도를 높입니다.</p>
+                    </div>
+                    <div class="why-card text-center">
+                        <div class="w-14 h-14 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            <span>프로젝트 기반 학습 (PBL)</span>
-                        </div>
+                        <h3 class="text-lg font-bold mb-2">끝까지 완성하는 힘</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">실패를 학습의 기회로 삼고, 지속적으로 자신의 결과를 개선합니다.</p>
                     </div>
                 </div>
             </div>
@@ -262,9 +313,9 @@
             <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
                 <div class="text-center mb-16">
                     <p class="text-sm font-medium text-black/40 uppercase tracking-[0.3em] mb-3">Programs</p>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">로보틱스에서 AI까지</h2>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">학생 성장 단계별 커리큘럼</h2>
                     <p class="text-black/50 text-base sm:text-lg max-w-2xl mx-auto px-4 sm:px-0">
-                        단순 코딩학원이 아닙니다. 로보틱스를 중심으로 소프트웨어와 AI까지 연결되는 프로젝트 기반 교육입니다
+                        아이의 연령과 경험에 맞는 단계로 자연스럽게 성장하는 7단계 로드맵
                     </p>
                 </div>
 
@@ -304,13 +355,13 @@
                     <div class="course-card aspect-[3/4]">
                         <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=800&fit=crop" class="w-full h-full object-cover" alt="VEX Competition">
                         <div class="level-badge bg-red-600 text-white">대회</div>
-                        <div class="age-badge">초1~고3</div>
+                        <div class="age-badge">초1~중3</div>
                         <div class="course-overlay"></div>
                         <div class="course-info text-white">
-                            <p class="text-xs text-white/60 mb-1">VEX COMPETITION</p>
-                            <h3 class="text-lg font-bold mb-1">VEX IQ &middot; V5 대회반</h3>
+                            <p class="text-xs text-white/60 mb-1">VEX IQ COMPETITION</p>
+                            <h3 class="text-lg font-bold mb-1">VEX IQ 대회반</h3>
                             <div class="course-desc">
-                                <p class="text-sm text-white/70 leading-relaxed">VEX IQ(초1~중3)와 V5(중1~고3)로 협업과 문제해결 능력을 키우고 대회에 참가합니다.</p>
+                                <p class="text-sm text-white/70 leading-relaxed">VEX IQ로 협업과 문제해결 능력을 키우고 대회에 참가합니다.</p>
                                 <button onclick="showPage('programs')" class="mt-3 text-red-400 text-sm font-medium flex items-center gap-1">
                                     자세히 보기 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                                 </button>
@@ -343,50 +394,94 @@
                 </div>
             </div>
 
-            <!-- Trial Class Process -->
+            <!-- Recommended Path -->
             <div class="bg-gray-50">
-                <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+                <div class="max-w-4xl mx-auto px-6 py-20 lg:py-28">
                     <div class="text-center mb-16">
-                        <p class="text-sm font-medium text-black/40 uppercase tracking-[0.3em] mb-3">Trial Class</p>
-                        <h2 class="text-4xl md:text-5xl font-bold mb-4">체험수업 안내</h2>
-                        <p class="text-black/50 text-lg max-w-2xl mx-auto">
-                            단순 견학이 아닙니다. 아이의 실제 수준과 학습 성향을 파악하는 1:1 진단 과정입니다
-                        </p>
+                        <p class="text-sm font-medium text-black/40 uppercase tracking-[0.3em] mb-3">Recommended Path</p>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">내 아이는 어떤 과정을<br class="hidden sm:inline">선택하면 될까요?</h2>
                     </div>
-
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-                        <div class="process-step bg-white rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">1</div>
-                            <h4 class="font-bold mb-2">체험수업</h4>
-                            <p class="text-sm text-gray-500">실제 수업 체험</p>
+                    <div class="relative pl-4">
+                        <div class="path-card">
+                            <div class="path-connector"></div>
+                            <span class="path-age">5~7세</span>
+                            <h3 class="text-lg font-bold mb-1">Discovery</h3>
+                            <p class="text-sm text-gray-500">로보틱스 · 코딩 입문</p>
                         </div>
-                        <div class="process-step bg-white rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">2</div>
-                            <h4 class="font-bold mb-2">레벨 진단</h4>
-                            <p class="text-sm text-gray-500">현재 실력 파악</p>
+                        <div class="path-card">
+                            <div class="path-connector"></div>
+                            <span class="path-age">초1~초3</span>
+                            <h3 class="text-lg font-bold mb-1">Foundation</h3>
+                            <p class="text-sm text-gray-500">로보틱스 · 코딩 기초</p>
                         </div>
-                        <div class="process-step bg-white rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">3</div>
-                            <h4 class="font-bold mb-2">학습 성향 확인</h4>
-                            <p class="text-sm text-gray-500">적합한 방식 분석</p>
+                        <div class="path-card">
+                            <div class="path-connector"></div>
+                            <span class="path-age">초4~초6</span>
+                            <h3 class="text-lg font-bold mb-1">Foundation + VEX IQ</h3>
+                            <p class="text-sm text-gray-500">기초 심화 + 대회 준비</p>
                         </div>
-                        <div class="process-step bg-white rounded-2xl p-6 text-center">
-                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">4</div>
-                            <h4 class="font-bold mb-2">과정 추천</h4>
-                            <p class="text-sm text-gray-500">맞춤 커리큘럼</p>
+                        <div class="path-card">
+                            <div class="path-connector"></div>
+                            <span class="path-age">중1~중3</span>
+                            <h3 class="text-lg font-bold mb-1">VEX IQ + Software + AI</h3>
+                            <p class="text-sm text-gray-500">대회 심화 + 소프트웨어 + AI 융합</p>
                         </div>
-                        <div class="bg-white rounded-2xl p-6 text-center border-2 border-black">
-                            <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">5</div>
-                            <h4 class="font-bold mb-2">반 배정</h4>
-                            <p class="text-sm text-gray-500">정규 수업 시작</p>
+                        <div class="path-card">
+                            <span class="path-age">고1~고3</span>
+                            <h3 class="text-lg font-bold mb-1">VEX V5 + Portfolio + AI</h3>
+                            <p class="text-sm text-gray-500">고급 대회 + 포트폴리오 + 진학 준비</p>
                         </div>
                     </div>
-
                     <div class="text-center mt-12">
+                        <p class="text-gray-500 mb-6 text-sm">아이의 현재 상황에 맞는 최적의 경로를 상담해 드립니다</p>
                         <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--black" type="button">
-                            체험수업 신청
+                            맞춤 과정 상담하기
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trial Class -->
+            <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div>
+                        <p class="text-sm font-medium text-black/40 uppercase tracking-[0.3em] mb-3">Trial Class</p>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">체험수업 및<br>레벨진단</h2>
+                        <p class="text-base sm:text-lg text-gray-500 leading-relaxed mb-8">
+                            단순 견학이 아닙니다. 아이의 실제 수준과 학습 성향을 파악하는 1:1 진단 과정입니다.
+                        </p>
+                        <div class="space-y-0">
+                            <div class="trial-step">
+                                <h4 class="font-bold text-base mb-1">체험수업</h4>
+                                <p class="text-sm text-gray-500">실제 수업과 동일한 환경에서 1시간 동안 체험합니다.</p>
+                            </div>
+                            <div class="trial-step">
+                                <h4 class="font-bold text-base mb-1">현재 수준 진단</h4>
+                                <p class="text-sm text-gray-500">아이의 현재 기술적 역량과 이해도를 객관적으로 평가합니다.</p>
+                            </div>
+                            <div class="trial-step">
+                                <h4 class="font-bold text-base mb-1">학습 성향 확인</h4>
+                                <p class="text-sm text-gray-500">아이에게 가장 적합한 학습 방식과 속도를 파악합니다.</p>
+                            </div>
+                            <div class="trial-step">
+                                <h4 class="font-bold text-base mb-1">교육과정 추천</h4>
+                                <p class="text-sm text-gray-500">진단 결과를 바탕으로 맞춤 커리큘럼을 제안합니다.</p>
+                            </div>
+                            <div class="trial-step">
+                                <h4 class="font-bold text-base mb-1">반 배정</h4>
+                                <p class="text-sm text-gray-500">가장 적합한 반에 배정하여 정규 수업을 시작합니다.</p>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--black" type="button">
+                                체험수업 및 레벨진단 신청
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=1000&fit=crop" class="w-full h-[600px] object-cover rounded-2xl" alt="Trial Class">
                     </div>
                 </div>
             </div>
@@ -480,7 +575,7 @@
                     </p>
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--white w-full sm:w-auto" type="button">
-                            체험수업 신청
+                            체험수업 및 레벨진단 신청
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </button>
                     </div>
@@ -503,12 +598,11 @@
                             수업의 질은 학교 이름이 아니라 교육 방식이 결정한다는 사실이었습니다.
                         </p>
                         <p>
-                            메카코딩은 그 경험을 수원의 모든 학생들에게 열어주고 싶어서 시작했습니다.
+                            메카코딩은 그 경험을 수원의 학생들에게 열어주고 싶어서 시작했습니다.
                         </p>
                         <p class="text-black font-medium text-lg sm:text-xl">
                             문제의 원인을 찾고,<br class="hidden sm:inline">
-                            해결책을 만들고,<br class="hidden sm:inline">
-                            끝까지 완성하는 힘입니다.
+                            해결책을 직접 만들어내는 힘입니다.
                         </p>
                         <p>
                             이 능력은 로보틱스뿐 아니라 인생 전체에서 필요한 역량이라고 믿습니다.
@@ -895,7 +989,7 @@
                 <div class="text-center mt-12">
                     <p class="text-gray-500 mb-6">아이에게 맞는 단계가 궁금하시다면 체험수업에서 확인해 보세요</p>
                     <button onclick="showPage('contact')" class="hero-cta-btn hero-cta-btn--black" type="button">
-                        체험수업 신청
+                        체험수업 및 레벨진단 신청
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </button>
                 </div>
