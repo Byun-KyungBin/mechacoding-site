@@ -1,9 +1,12 @@
+import type { MetadataRoute } from "next";
 
-export default function sitemap() {
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    { url: "https://mechacoding.kr" },
-    { url: "https://mechacoding.kr/about" },
-    { url: "https://mechacoding.kr/programs" },
-    { url: "https://mechacoding.kr/contact" }
+    {
+      url: "https://mechacoding.kr",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
   ];
 }
