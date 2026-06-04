@@ -109,19 +109,20 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
               </div>
             </div>
           </div>
-<div className="mt-12 pt-8 border-t border-gray-800 flex flex-col items-center gap-3">
-  <p className="text-gray-500 text-sm">
-    &copy; 2026 MechaCoding Academy. All rights reserved.
-  </p>
+          <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col items-center gap-3">
+            <p className="text-gray-500 text-sm">
+              &copy; 2026 MechaCoding Academy. All rights reserved.
+            </p>
 
-  <p className="text-gray-400 text-sm text-center">
-    메카코딩학원 | 수원 로봇코딩학원
-  </p>
+            <p className="text-gray-400 text-sm text-center">
+              메카코딩학원 | 수원 로봇코딩학원
+            </p>
 
-  <p className="text-gray-600 text-sm text-center">
-    초등·중등·고등 VEX Robotics · AI · Python 프로젝트 교육
-  </p>
-</div>
+            <p className="text-gray-600 text-sm text-center">
+              초등·중등·고등 VEX Robotics · AI · Python 프로젝트 교육
+            </p>
+
+          </div>
         </div>
       </footer>
 
