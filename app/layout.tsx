@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://www.mechacoding.kr/images/og-image.jpg",
+        url: "https://www.mechacoding.kr/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "메카코딩학원 - 수원 로봇코딩학원"
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     description:
       "초등·중등·고등 로봇코딩 교육, VEX Robotics 전문교육",
 
-    images: ["https://www.mechacoding.kr/images/og-image.jpg"]
+    images: ["https://www.mechacoding.kr/images/og-image.png"]
   },
 
   alternates: {
