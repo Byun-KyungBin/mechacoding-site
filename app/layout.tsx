@@ -3,25 +3,68 @@ import "./globals.css";
 import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
-  title: "MechaCoding Academy - 수원 로보틱스·소프트웨어·AI 교육",
-  description: "수원 광교·호매실 메카코딩학원. VEX Robotics, 소프트웨어, AI까지 연결되는 프로젝트 기반 교육. 5세부터 고3까지 단계별 맞춤 커리큘럼.",
-  keywords: ["수원코딩학원", "광교코딩학원", "호매실코딩학원", "금곡동코딩학원", "로봇학원", "로보틱스학원", "AI교육", "AI학원", "VEX Robotics", "VEX IQ", "VEX V5"],
+  title: "메카코딩학원 | 수원 로봇코딩학원",
+
+  description:
+    "수원 권선구 금곡동 위치. 초등·중등·고등 로봇코딩 교육, VEX Robotics 대회준비반 운영, AI·Python 프로젝트 수업.",
+
+  keywords: [
+    "수원코딩학원",
+    "수원로봇코딩학원",
+    "광교코딩학원",
+    "호매실코딩학원",
+    "금곡동코딩학원",
+    "권선구코딩학원",
+    "로봇코딩",
+    "로봇학원",
+    "로보틱스",
+    "VEX Robotics",
+    "VEX IQ",
+    "VEX V5",
+    "AI교육",
+    "Python교육",
+    "초등코딩",
+    "중등코딩",
+    "고등코딩",
+    "프로젝트기반학습"
+  ],
+
   openGraph: {
     type: "website",
-    url: "https://mechacoding.kr",
-    title: "MechaCoding Academy - 수원 로보틱스·소프트웨어·AI 교육",
-    description: "5세부터 고3까지, 로보틱스·소프트웨어·AI를 연결하는 프로젝트 기반 교육. VEX Robotics 전문 아카데미.",
-    siteName: "MechaCoding Academy",
-    images: [{ url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=630&fit=crop", width: 1200, height: 630 }],
+    url: "https://www.mechacoding.kr",
+
+    title: "메카코딩학원 | 수원 로봇코딩학원",
+
+    description:
+      "초등·중등·고등 로봇코딩 교육, VEX Robotics 대회준비반, AI·Python 프로젝트 수업",
+
+    siteName: "메카코딩학원",
+
+    images: [
+      {
+        url: "https://www.mechacoding.kr/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "메카코딩학원 - 수원 로봇코딩학원"
+      }
+    ]
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "MechaCoding Academy - 수원 로보틱스·소프트웨어·AI 교육",
-    description: "5세부터 고3까지, 로보틱스·소프트웨어·AI를 연결하는 프로젝트 기반 교육.",
-    images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=630&fit=crop"],
-  },
-};
 
+    title: "메카코딩학원 | 수원 로봇코딩학원",
+
+    description:
+      "초등·중등·고등 로봇코딩 교육, VEX Robotics 전문교육",
+
+    images: ["https://www.mechacoding.kr/images/og-image.jpg"]
+  },
+
+  alternates: {
+    canonical: "https://www.mechacoding.kr"
+  }
+};
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className="scroll-smooth">
