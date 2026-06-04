@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "메카코딩학원 | 수원 로봇코딩학원",
 
   description:
-    "수원 광교·호매실 로봇코딩학원. VEX Robotics 전문교육, AI·Python 프로젝트 수업, 초등·중등·고등 맞춤 커리큘럼",
+    "수원 광교·호매실 로봇코딩학원. VEX Robotics·AI·Python 전문교육.",
 
   keywords: [
     "수원코딩학원",
