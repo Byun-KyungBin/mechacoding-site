@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-sm font-medium text-black/40 uppercase tracking-[0.3em] mb-3">Why MechaCoding</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 leading-tight">
-            우리가 가르치고 싶은 것은<br className="hidden sm:inline" />로봇이 아닙니다
+            우리가 가르치고 싶은 것은<br className="hidden sm:inline" />\n로봇이 아닙니다
           </h2>
           <p className="text-base sm:text-lg text-gray-500 leading-relaxed mb-6">
             중요한 것은 로봇 자체가 아닙니다.<br className="hidden sm:inline" />
