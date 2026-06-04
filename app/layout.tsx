@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "메카코딩학원 | 수원 로봇코딩학원",
 
   description:
-    "수원 권선구 금곡동 위치. 초등·중등·고등 로봇코딩 교육, VEX Robotics 대회준비반 운영, AI·Python 프로젝트 수업.",
+    "수원 광교·호매실 로봇코딩학원. VEX Robotics 전문교육, AI·Python 프로젝트 수업, 초등·중등·고등 맞춤 커리큘럼",
 
   keywords: [
     "수원코딩학원",
