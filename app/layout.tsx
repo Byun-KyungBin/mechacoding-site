@@ -60,7 +60,9 @@ export const metadata: Metadata = {
 
     images: ["https://www.mechacoding.kr/images/og-image.png"]
   },
-
+  verification: {
+    google: "3qEYUIoNZEhr1uF-y-kP9cYK49gwqbSsHi7UQF1YFjA",
+  },
   alternates: {
     canonical: "https://www.mechacoding.kr"
   }
