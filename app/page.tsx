@@ -9,7 +9,7 @@ const slides = [
     label: 'Robotics · Software · AI',
     title: '생각을 현실로 만드는 힘',
     desc: '학생이 직접 만들고, 실험하고, 문제를 해결하며 성장하는 프로젝트 기반 교육',
-    sub: ['초1~고3 맞춤 교육', 'VEX Robotics · Python · Arduino · AI', '체험수업 및 레벨진단 운영'],
+    sub: ['5세~고3 맞춤 교육', 'VEX Robotics · Python · Arduino · AI', '체험수업 및 레벨진단 운영'],
   },
   {
     bg: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1920&h=1080&fit=crop')",
