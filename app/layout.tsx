@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
 
   description:
-    "5세부터 고등학생까지. VEX Robotics, AI, Python, 프로젝트 기반 로봇코딩 교육. 광교·호매실 캠퍼스 운영, 전국대회 준비반 운영.",
+    "5세~고등학생 대상 로봇코딩·AI·Python 교육. 광교·호매실 캠퍼스 운영.",
 
   keywords: [
     "메카코딩학원",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
 
     description:
-      "5세부터 고등학생까지. VEX Robotics, AI, Python, 프로젝트 기반 로봇코딩 교육. 광교·호매실 캠퍼스 운영, 전국대회 준비반 운영.",
+      "5세~고등학생 대상 로봇코딩·AI·Python 교육. VEX Robotics 대회준비반 운영.",
 
     url: "https://www.mechacoding.kr",
 
