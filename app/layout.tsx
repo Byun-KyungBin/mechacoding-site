@@ -1,23 +1,22 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import ClientLayout from "./ClientLayout";
-
 export const metadata: Metadata = {
-  title: "메카코딩학원 | 수원 로봇코딩학원",
+  metadataBase: new URL("https://www.mechacoding.kr"),
+
+  title: {
+    default: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
+    template: "%s | 메카코딩학원",
+  },
 
   description:
-    "수원 광교·호매실 로봇코딩학원. VEX Robotics·AI·Python 전문교육.",
+    "5세부터 고등학생까지. VEX Robotics, AI, Python, 프로젝트 기반 로봇코딩 교육. 광교·호매실 캠퍼스 운영, 전국대회 준비반 운영.",
 
   keywords: [
+    "메카코딩학원",
     "수원코딩학원",
     "수원로봇코딩학원",
     "광교코딩학원",
     "호매실코딩학원",
     "금곡동코딩학원",
     "권선구코딩학원",
-    "로봇코딩",
-    "로봇학원",
-    "로보틱스",
     "VEX Robotics",
     "VEX IQ",
     "VEX V5",
@@ -26,59 +25,60 @@ export const metadata: Metadata = {
     "초등코딩",
     "중등코딩",
     "고등코딩",
-    "프로젝트기반학습"
+    "로보틱스",
+    "로봇코딩",
+    "대회준비반",
+    "코딩대회",
+    "프로젝트기반학습",
   ],
+
+  icons: {
+    icon: [
+      { url: "/images/favicon.ico" },
+    ],
+    apple: "/images/favicon.ico",
+  },
 
   openGraph: {
     type: "website",
+    locale: "ko_KR",
     url: "https://www.mechacoding.kr",
 
-    title: "메카코딩학원 | 수원 로봇코딩학원",
+    title:
+      "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
 
     description:
-      "초등·중등·고등 로봇코딩 교육, VEX Robotics 대회준비반, AI·Python 프로젝트 수업",
+      "5세부터 고등학생까지. VEX Robotics, AI, Python, 프로젝트 기반 로봇코딩 교육. 광교·호매실 캠퍼스 운영.",
 
     siteName: "메카코딩학원",
 
     images: [
       {
-        url: "https://www.mechacoding.kr/images/og-image.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "메카코딩학원 - 수원 로봇코딩학원"
-      }
-    ]
+        alt: "메카코딩학원",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
 
-    title: "메카코딩학원 | 수원 로봇코딩학원",
+    title:
+      "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
 
     description:
-      "초등·중등·고등 로봇코딩 교육, VEX Robotics 전문교육",
+      "5세부터 고등학생까지. VEX Robotics, AI, Python 프로젝트 교육.",
 
-    images: ["https://www.mechacoding.kr/images/og-image.png"]
+    images: ["/images/og-image.png"],
   },
+
   verification: {
     google: "3qEYUIoNZEhr1uF-y-kP9cYK49gwqbSsHi7UQF1YFjA",
   },
+
   alternates: {
-    canonical: "https://www.mechacoding.kr"
-  }
+    canonical: "https://www.mechacoding.kr",
+  },
 };
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="ko" className="scroll-smooth">
-      <head>
-        <link rel="icon" type="image/png" href="/images/favicon.ico" />
-        <link rel="apple-touch-icon" href="/images/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="bg-white text-black antialiased">
-        <ClientLayout>{children}</ClientLayout>
-      </body>
-    </html>
-  );
-}
