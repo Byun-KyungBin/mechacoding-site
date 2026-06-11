@@ -1,6 +1,5 @@
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.mechacoding.kr"),
-
+  
   title: {
     default: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
     template: "%s | 메카코딩학원",
