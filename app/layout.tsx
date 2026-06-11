@@ -1,9 +1,5 @@
 export const metadata: Metadata = {
-  
-  title: {
-    default: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
-    template: "%s | 메카코딩학원",
-  },
+  title: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
 
   description:
     "5세부터 고등학생까지. VEX Robotics, AI, Python, 프로젝트 기반 로봇코딩 교육. 광교·호매실 캠퍼스 운영, 전국대회 준비반 운영.",
@@ -31,29 +27,19 @@ export const metadata: Metadata = {
     "프로젝트기반학습",
   ],
 
-  icons: {
-    icon: [
-      { url: "/images/favicon.ico" },
-    ],
-    apple: "/images/favicon.ico",
-  },
-
   openGraph: {
-    type: "website",
-    locale: "ko_KR",
-    url: "https://www.mechacoding.kr",
-
-    title:
-      "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
+    title: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
 
     description:
       "5세부터 고등학생까지. VEX Robotics, AI, Python, 프로젝트 기반 로봇코딩 교육. 광교·호매실 캠퍼스 운영.",
+
+    url: "https://www.mechacoding.kr",
 
     siteName: "메카코딩학원",
 
     images: [
       {
-        url: "/images/og-image.png",
+        url: "https://www.mechacoding.kr/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "메카코딩학원",
@@ -64,20 +50,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
+    title: "메카코딩학원 | 수원 로봇코딩·AI·VEX Robotics 전문교육",
 
     description:
       "5세부터 고등학생까지. VEX Robotics, AI, Python 프로젝트 교육.",
 
-    images: ["/images/og-image.png"],
+    images: ["https://www.mechacoding.kr/images/og-image.png"],
   },
 
   verification: {
     google: "3qEYUIoNZEhr1uF-y-kP9cYK49gwqbSsHi7UQF1YFjA",
-  },
-
-  alternates: {
-    canonical: "https://www.mechacoding.kr",
   },
 };
